@@ -1,0 +1,276 @@
+.footer{
+	background-color: #212121;
+}
+
+.footer__subscribe{
+	background-image: url(../img/subscribe-bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+
+
+}
+
+.footer__subscribe-wrap{
+	.container-fluid;	
+	min-height:200px;
+
+	display: flex;
+	flex-direction: row;
+	justify-content:space-around;
+	flex-wrap:wrap;
+	align-items: center;
+	align-content: center;
+
+	
+	& h1{
+		font-size:2.4em;
+		color:#FEFEFE;
+		text-align: center;
+	}
+
+	& input{
+		height:40px;
+		width:200px;
+		font-size:1.2em;
+		color:#595A5E;
+		background-color: inherit;
+		border:1px solid #595A5E;
+		border-radius:20px;
+		padding-left:15px;
+		margin-left: 20px;
+	}
+}
+
+.footer__subscribe-btn{
+	padding:12px 24px;
+	background-color: #303E9F;
+	color:#fff;
+	border-radius:20px;
+	text-transform: uppercase;
+	cursor:pointer;
+}
+
+.footer__subscribe-input-btn{
+	flex-grow:1;
+	display: flex;
+	flex-direction: row;
+	flex-wrap:wrap;
+	justify-content: space-around;
+}
+
+.footer__widgets-wrap{
+	.container-fluid;
+	display: flex;
+	flex-direction: row;
+	flex-wrap:wrap;
+	justify-content: center;
+
+	padding-bottom: 40px;
+
+}
+
+.footer__widgets-inner-wrap{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width:50%;
+	max-width:540px;
+}
+
+.footer__widget-headerline{
+	text-transform: uppercase;
+	color:#fff;
+}
+
+.footer__pages-widget{
+	max-width:250px;
+	min-width:250px;
+	padding:0 10px;
+
+	& ul{
+		padding: 0;
+		margin: 0;
+	}
+
+	& li{
+		list-style:none;
+		text-transform: uppercase;
+		font-weight:bold;
+		padding: 10px 15px;
+		margin-bottom:7px;
+		border:1px solid #707070;
+		border-radius:4px;
+		color:#CCCCCC;
+		font-size: .8em;
+		cursor:pointer;
+
+		transition:all .5s ease-in-out; 
+
+		&:hover{
+			background-color: #fff;
+			color:#000;
+		}
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+
+.footer__twitter-widget{
+	max-width:270px;
+	padding:0 10px;
+}
+
+.footer__twit{
+	display: flex;
+	flex-direction: column;
+	color:#B1B1B1;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 10px;
+
+	max-width:250px;
+	min-width:250px;
+
+	&:last-child{
+		border-bottom: none;
+	}
+}
+
+.footer__twit-text-icon{
+	display: flex;
+	flex-direction: row;
+	
+	& p{
+		padding:0 10px;
+		font-size:.8em;
+	}
+}
+
+.footer__twit-icon{
+	font-size:2.7em;
+	color:#52ADF1;
+}
+
+.footer__twit-date{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	font-size:.7em;
+
+	& i{
+		margin-left: 10px;
+	}
+}
+
+.footer__twit-btns{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-grow:1;
+
+	& span{
+		text-decoration: underline;
+	}
+}
+
+.footer__flickr-widget{
+	width:270px;
+	padding:0 10px;
+	max-width:250px;
+	min-width:250px;
+}
+
+.footer__flickr-img{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-right: 0;
+
+	& img{
+		width:80px;
+		height: 80px;
+		margin-bottom: 7px;
+	}
+}
+
+.footer__news-letter{
+	max-width:270px;
+	padding:0 10px;
+
+	max-width:250px;
+	min-width:250px;
+}
+
+.footer__news-letter-form{
+
+	& input,
+	& textarea{
+		// max-width:250px;
+		// min-width:250px;
+		width: 230px;
+		background-color: inherit;
+		padding:10px;
+		margin-bottom: 10px;
+		border: 1px solid #5D5D5D;
+		border-radius:3px;
+	}
+
+	& button{
+		border:none;
+		color:#fff;
+		background-color: #303030;
+		padding: 10px 0;
+		font-size:.9em;
+		text-transform: uppercase;
+		width:250px;
+		border-radius: 3px;	
+		cursor:pointer;
+	}
+}
+
+@media @mobile-width-only{
+	.footer__widgets-wrap{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.footer__subscribe-btn{
+		margin: 20px 0 20px 20px;
+	}
+}
+
+@media @tablet-width{
+	.footer__twitter-widget,
+	.footer__flickr-widget{
+		display: none;
+	}
+
+	.footer__widgets-inner-wrap,
+	.footer__pages-widget,
+	.footer__news-letter{
+		min-width:100%;
+		max-width:100%;
+	}
+
+	.footer__news-letter-form{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		& input,
+		& textarea{
+			width:90%;
+			padding-right: 0;
+		}
+
+		& button{
+			width:100%;
+		}
+	}
+}

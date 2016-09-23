@@ -1,0 +1,19 @@
+@mobile-width-only: ~"(max-width:768px)";
+@tablet-width: ~"(max-width:959px)";
+@desktop-width: ~"(min-width:960px)";
+
+.container-fluid{
+	width:auto;
+
+	@media @tablet-width{
+		width:95%;
+		margin:0 auto;
+		max-width:960px;
+	}
+
+	@media @desktop-width{
+		width:90%;
+		margin:0 auto;
+		max-width:1170px;
+	}
+}
